@@ -1,22 +1,19 @@
-import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { HomePage } from './pages/home.jsx'
-import { Marketplace } from './pages/marketplace.jsx'
-import { AccountPage } from './pages/account.jsx'
+import { HomePage } from './pages/Home.jsx'
+import { Marketplace } from './pages/Marketplace.jsx'
+import { AccountPage } from './pages/Account.jsx'
 import { NotFoundPage } from './pages/NotFoundPage.jsx'
 import { Layout } from './components/layout.jsx'
-// import './App.css'
+import { URLS } from './components/const.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route path='/' element={< HomePage />} index />
-        <Route path='/marketplace' element={< Marketplace />} />
-        <Route path='/account' element={< AccountPage />} />
-        <Route path='*' element={< NotFoundPage />} />
+      <Route path={URLS.HOME} element={<Layout/>}>
+        <Route path={URLS.HOME} element={<HomePage/>} index />
+        <Route path={URLS.MARKETPLACE} element={<Marketplace/>} />
+        <Route path={URLS.ACCOUNT} element={<AccountPage/>} />
+        <Route path='*' element={<NotFoundPage/>} />
       </Route>
     </Routes>
   )

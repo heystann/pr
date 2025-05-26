@@ -1,3 +1,5 @@
+import { Container } from "../components/Container"
+
 export const HomePage = () => {
-    return <div className="container"><h1>Home Page</h1></div>
+  return <Container title={"Home Page"}></Container>
 }
