@@ -1,5 +1,5 @@
 import { Container } from "../components/Container"
 
 export const HomePage = () => {
-  return <Container title={"Home Page"}></Container>
+  return <Container title={"Home Page"} />
 }
